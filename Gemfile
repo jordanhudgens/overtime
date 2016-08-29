@@ -23,6 +23,7 @@ group :development do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'faker', '~> 1.6', '>= 1.6.6'
 end
 
 gem 'devise', '~> 4.2'
