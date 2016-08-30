@@ -3,7 +3,6 @@ class CreatePosts < ActiveRecord::Migration[5.0]
     create_table :posts do |t|
       t.date :date
       t.text :rationale
-
       t.timestamps
     end
   end
