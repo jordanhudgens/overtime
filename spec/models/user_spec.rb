@@ -3,13 +3,7 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
 
   before do
-    @user = User.create(
-        email: 'test@test.com',
-        password: '123456',
-        password_confirmation: '123456',
-        first_name: 'John',
-        last_name: 'Snow'
-    )
+    @user = FactoryGirl.build_stubbed(:user)
   end
 
   describe 'creation' do

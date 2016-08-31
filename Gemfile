@@ -17,6 +17,7 @@ group :development, :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'awesome_print', require:'ap'
+  gem 'factory_girl_rails', '~> 4.7'
 end
 
 group :development do

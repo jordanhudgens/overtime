@@ -3,11 +3,13 @@ require 'rails_helper'
 RSpec.describe Post, type: :model do
   describe 'Creation' do
     before do
-      @post = Post.create(date: Date.today, rationale: 'Lorem ipsum')
+      user = FactoryGirl.create(:user)
+      @post = FactoryGirl.create(:post)
+      @post.user_id = user.id
     end
 
     it 'can be created' do
-      # expect(@post).to be_valid
+      expect(@post).to be_valid
     end
 
     it 'cannot be created without date and radionale' do
