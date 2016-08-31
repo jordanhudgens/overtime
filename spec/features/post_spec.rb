@@ -21,11 +21,11 @@ describe 'navigate' do
       expect(page).to have_content(/Posts/)
     end
 
-    it 'has list of posts' do
-      FactoryGirl.create(:post)
-      FactoryGirl.create(:second_post)
+    it 'has a list of posts' do
+      post1 = FactoryGirl.build_stubbed(:post)
+      post2 = FactoryGirl.build_stubbed(:second_post)
       visit posts_path
-      expect(page).to have_content(/First post|Second post/)
+      expect(page).to have_content(/Rationale|content/)
     end
 
   end
